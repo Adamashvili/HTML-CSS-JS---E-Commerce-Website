@@ -50,6 +50,10 @@ p {
     padding: 20px 80px;
     background: #E3E6F3;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #navbar {
@@ -79,14 +83,50 @@ p {
 }
 
 
-#navbar li a.active::after {
+#navbar li a.active::after,
+#navbar li a:hover::after {
     content: "";
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
+    width: 55%;
     height: 2px;
     position: absolute;
     background: #088178;
     bottom: -4px;
     left: 20px;
+}
+
+/* homepage */
+
+#banner {
+    background-image: url("img/hero4.png");
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#banner h4 {
+    padding-bottom: 15px;
+
+}
+#banner h1 {
+    color: #088178;
+    
+}
+
+#banner button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+
 }
